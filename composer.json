@@ -1,11 +1,30 @@
 {
     "name": "blogbundle/blogbundle",
-    "description": "parser for symfony",
-    "version": "1.0.0",
-    "require": {},
-    "autoload":{
-        "psr-4":{
-            "BlogBundle\\":"src/"
+    "type": "symfony-bundle",
+    "description": "Symfony parser",
+    "version": "2.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rexar",
+            "email": "rexar@mail.ru"
         }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/framework-bundle": "^3.4|^4.0",
+        "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/orm": "~2.4,>=2.4.5"
+    },
+    "autoload": {
+        "psr-4" : {
+            "BlogBundle\\BlogBundle\\" : ""
+        }
+    },
+ 
+    "require-dev": {
+        "phpunit/phpunit": "^4.0",
+        "symfony/symfony": "^2.4|^3.0|^4.0"
     }
 }
+
