@@ -1,6 +1,6 @@
 <?php
 
-namespace BlogBundle\Controller;
+namespace BlogBundle\BlogBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;

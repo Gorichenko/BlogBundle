@@ -1,11 +1,11 @@
 <?php
 
-namespace BlogBundle\Command;
+namespace BlogBundle\BlogBundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use BlogBundle\Service\ParserService;
+use BlogBundle\BlogBundle\Service\ParserService;
 
 class ParseCommand extends Command
 {
