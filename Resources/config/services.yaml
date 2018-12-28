@@ -2,23 +2,13 @@ parameters:
   blog_parse_url: "https://shkolazhizni.ru/articles/"
 
 services:
-  _defaults:
-    autowire: true      # Automatically injects dependencies in your services.
-    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-    public: false
 
+   BlogBundle\BlogBundle\Command\:
+      resource: '../../Command'
+      tags: [console.command]
 
-    BlogBundle\:
-      resources: "../../*"
-      exclude: "../../(Entity, Migrations, Tests)"
-
-
-    BlogBundle\Controller\:
-       resource: "../../Controller"
-       tags: ['controller.service_arguments']
-
-    blog.bundle.parser:
-      class: BlogBundle\Service\ParserService
+   blog.bundle.parser:
+      class: BlogBundle\BlogBundle\Service\ParserService
       arguments:
       [
           '@service_container',
