@@ -1,0 +1,28 @@
+parameters:
+  blog_parse_url: "https://shkolazhizni.ru/articles/"
+
+services:
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    public: false
+
+
+    BlogBundle\:
+      resources: "../../*"
+      exclude: "../../(Entity, Migrations, Tests)"
+
+
+    BlogBundle\Controller\:
+       resource: "../../Controller"
+       tags: ['controller.service_arguments']
+
+    blog.bundle.parser:
+      class: BlogBundle\Service\ParserService
+      arguments:
+      [
+          '@service_container',
+          '@doctrine.orm.entity_manager'
+      ]
+      tags:
+      - { name: blog_bundle.parser }

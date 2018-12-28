@@ -1,0 +1,10 @@
+{
+    "name": "blogbundle/blogbundle",
+    "description": "parser for symfony",
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "BlogBundle\\":"src/"
+        }
+    }
+}
