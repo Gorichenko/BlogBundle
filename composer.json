@@ -1,6 +1,7 @@
 {
     "name": "blogbundle/blogbundle",
     "description": "parser for symfony",
+    "version": "1.0.0",
     "require": {},
     "autoload":{
         "psr-4":{
